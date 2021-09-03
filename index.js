@@ -90,7 +90,6 @@ module.exports = {
     'no-duplicate-imports': 'error',
     'no-else-return': ['error', { allowElseIf: true }],
     'no-empty-character-class': 'error',
-    'no-ex-assign': 'error',
     'no-extra-boolean-cast': 'error',
     'no-extra-parens': ['error', 'functions'],
     'no-extra-semi': 'error',
@@ -186,10 +185,6 @@ module.exports = {
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': 'error',
     'space-unary-ops': 'error',
-    'spaced-comment': ['error', 'always', {
-      'block': { 'balanced': true },
-      'exceptions': ['-'],
-    }],
     'strict': ['error', 'global'],
     'symbol-description': 'error',
     'template-curly-spacing': 'error',
@@ -200,6 +195,11 @@ module.exports = {
     // Custom rules
     'mscdex/curly': ['error', 'multi-or-nest', 'consistent'],
     'mscdex/quotes': ['error', 'single', { avoidEscape: true }],
+    'mscdex/spaced-comment': ['error', 'always', {
+      'block': { 'balanced': true },
+      'exceptions': ['-'],
+      'prefixExceptions': ['~'],
+    }],
   },
   globals: {
     Atomics: 'readable',
@@ -208,6 +208,7 @@ module.exports = {
     BigUint64Array: 'readable',
     TextEncoder: 'readable',
     TextDecoder: 'readable',
+    SharedArrayBuffer: 'readable',
     globalThis: 'readable',
   },
 };
