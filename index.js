@@ -129,7 +129,6 @@ module.exports = {
       }
     ],
     /* eslint-enable max-len */
-    'no-return-await': 'error',
     'no-self-assign': 'error',
     'no-self-compare': 'error',
     'no-setter-return': 'error',
@@ -192,6 +191,9 @@ module.exports = {
     'unicode-bom': 'error',
     'use-isnan': 'error',
     'valid-typeof': 'error',
+
+    // Overrides
+    'no-return-await': 'off',
 
     // Custom rules
     'mscdex/curly': ['error', 'multi-or-nest', 'consistent'],
